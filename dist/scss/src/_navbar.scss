@@ -1,0 +1,100 @@
+.navbar {
+  @extend .animate;
+  background-color: #f3f5f9;
+  padding: 30px 0;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  &.sticky {
+    padding: 10px 0;
+    box-shadow: 0 1px 5px rgba($dark, .23);
+  }
+
+  &--logo {
+    display: block;
+    height: 40px;
+    width: 165px;
+  }
+
+  &--nav {
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0 -12px;
+
+      li {
+        @extend .condensed;
+        display: block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+
+        a {
+          display: block;
+          padding: 0 12px;
+          text-decoration: none;
+          color: $dark;
+
+          &:hover, &.active {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  &--lang {
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0 -5px;
+
+      li {
+        @extend .condensed;
+        display: block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+
+        a {
+          display: block;
+          padding: 0 5px;
+          text-decoration: none;
+          color: $grey;
+
+          &:hover, &.active {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  .wraper {
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+
+    &--left {
+      flex: 1;
+      padding: 0 15px;
+    }
+
+    &--center, &--right {
+      padding: 0 15px;
+      flex: none;
+    }
+
+    &--right {
+      padding-left: 30px;
+    }
+  }
+
+
+
+
+}

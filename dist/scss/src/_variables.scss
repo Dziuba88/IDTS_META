@@ -1,0 +1,22 @@
+// Media Query Ranges //
+  $xs-screen: 520px !default;
+  $sm-screen: 768px !default;
+  $md-screen: 960px !default;
+  $lg-screen: 1200px !default;
+// Grid //
+  $num-cols: 12 !default;
+  $gutter: 30px !default;
+
+// UI VARIABLES //
+  .headers {font-family: 'Cabin', sans-serif;}
+  .condensed {font-family: 'Cabin Condensed', sans-serif;}
+  .text {font-family: 'Open Sans', sans-serif;}
+
+  .animate {transition: all 225ms cubic-bezier(0.4, 0.0, 0.2, 1);}
+
+  $dark: #252427 !default; 
+  $grey: rgba(black, .5) !default; 
+  $light: #a8a7a9 !default; 
+  $yellow: #f8b400 !default; 
+  $blue: #003d81 !default; 
+
