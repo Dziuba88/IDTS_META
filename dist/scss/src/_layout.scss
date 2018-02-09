@@ -204,17 +204,17 @@
     }
 
     .title {
-      @extend .condensed;
+      @extend .condensed;@extend .animate;
       display: inline;
       color: #fff;text-transform: uppercase;
       font-size: 24px;line-height: 38px;font-weight: 700;letter-spacing: 0.01em;
-      background-color: rgba($blue, .75);padding: 4px 10px;@extend .animate;
+      background-color: rgba($blue, .8);padding: 4px 10px;
       -webkit-box-decoration-break: clone;box-decoration-break: clone;
 
-      &--wraper {display: block;position: relative;z-index: 2;text-align: center;}
+      &--wraper {display: block;position: relative;z-index: 2;text-align: center;padding: 30px;}
     }
 
-    &:hover .overlay {opacity: .25;}
+    &:hover .overlay {opacity: .2;}
     &:hover .title {background-color: rgba($blue, 0);}
 
 
