@@ -1,2 +1,29 @@
 // SECTION 
-section#promotii.page--section 
+section#promotii.section
+  .container
+    .row
+      .col.lg-10.offset-lg-1
+        h2.section--header
+          span Promotii
+          svg: use(xlink:href="#h2bg")
+        .section--body
+          .owl-carousel(data-slider="promo")
+            .item-video: a.owl-video(href="http://youtube.com/watch?v=WNJlKaF8sJc")
+            .item-video: a.owl-video(href="http://youtube.com/watch?v=D9ioyEvdggk")
+            .item-video: a.owl-video(href="http://youtube.com/watch?v=opuzm5rvNig")
+            .item-video: a.owl-video(href="http://youtube.com/watch?v=PD-MdiUm1_Y")
+            .item-video: a.owl-video(href="http://youtube.com/watch?v=Twb65Ov67ZA")
+  .owl-carousel(data-slider="gallery")
+    - for(i=0;i<5;i++)
+      .item: a.popup--image(href="img/promo1.jpg")
+        span(style="background:url(img/promo1.jpg) no-repeat center center")
+        svg: use(xlink:href="#zoom")
+      .item: a.popup--image(href="img/promo2.jpg")
+        span(style="background:url(img/promo2.jpg) no-repeat center center")
+        svg: use(xlink:href="#zoom")
+      .item: a.popup--image(href="img/promo3.jpg")
+        span(style="background:url(img/promo3.jpg) no-repeat center center")
+        svg: use(xlink:href="#zoom")
+      .item: a.popup--image(href="img/promo4.jpg")
+        span(style="background:url(img/promo4.jpg) no-repeat center center")
+        svg: use(xlink:href="#zoom")

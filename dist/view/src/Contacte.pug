@@ -23,6 +23,23 @@ section#contacte.section
               span: a(href="http://facebook.com" target="_blank") Facebook
       .col.md-6
         .contacts--form
+          .row
+            .col.md-6
+              .form--row
+                label Nume
+                input(type="text")
+            .col.md-6
+              .form--row
+                label E-mail
+                input(type="email")
+          .form--row
+            label Comentariu
+            textarea(cols="30", rows="10")
+          .form--row
+            .captcha--block
+              .g-recaptcha(data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW")
+              script(src='https://www.google.com/recaptcha/api.js')
+          button.btn--summit Trimite
 
 
 

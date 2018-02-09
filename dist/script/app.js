@@ -21,4 +21,37 @@ $(document).ready(function() {
     offset: 61,
     speed: 960,
   });
+
+  $('[data-slider=promo]').owlCarousel({
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    nav: true,
+    navText: ['<svg><use xlink:href="#prev"></use></svg>','<svg><use xlink:href="#next"></use></svg>'],
+    dots: false,
+    items:1,
+    loop:true,
+    margin:0,
+    video:true,
+    thumbs: true,
+    thumbImage: true,
+  })
+
+  $('[data-slider=gallery]').owlCarousel({
+    items: 5,
+    thumbs: false,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    nav: true,
+    navText: ['<svg><use xlink:href="#prev"></use></svg>','<svg><use xlink:href="#next"></use></svg>'],
+    dots: false,
+  });
+
+
+
+
+
 });
