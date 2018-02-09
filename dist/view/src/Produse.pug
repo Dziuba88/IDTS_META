@@ -13,27 +13,65 @@ section#produse.section
             .col.md-3: img(src="img/produse.png", alt="").produse--img
   .catalog
     .row
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category1.jpg) no-repeat center center")
         span.title--wraper: span.title Biscuiți
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category2.jpg) no-repeat center center")
         span.title--wraper: span.title Colaci și produse împletite
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category3.jpg) no-repeat center center")
         span.title--wraper: span.title Covrigei
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category4.jpg) no-repeat center center")
         span.title--wraper: span.title Prăjituri
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category5.jpg) no-repeat center center")
         span.title--wraper: span.title Cereale
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category6.jpg) no-repeat center center")
         span.title--wraper: span.title Paste
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category7.jpg) no-repeat center center")
         span.title--wraper: span.title Turte dulci
-      .col.md-3.sm-6: a.catalog--link
+      .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category8.jpg) no-repeat center center")
         span.title--wraper: span.title Napolitane
+  <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+  #category1.zoom-anim-dialog.mfp-hide.catalog--modal
+    .category--description
+      .image: img(src="img/category1.jpg", alt="")
+      .info
+        h2 Biscuiți
+        p Naturali, sinceri si curati, biscuitii nostri sunt buni de savurat in orice moment al zilei. Ti-i preparam si daruim in tot felul de sortimente si arome, de la traditionalii biscuiti cu ovaz pana la deserturi savuroase precum biscuitii cu lapte si gust de frisca.
+    .category--list
+      .row
+        .col.sm-4.item
+          .item--image: img(src="img/product-1.png", alt="")
+          .item--title Biscuiti cu cacao
+        .col.sm-4.item
+          .item--image: img(src="img/product-2.png", alt="")
+          .item--title Biscuiti cu graham si seminte de susan
+        .col.sm-4.item
+          .item--image: img(src="img/product-3.png", alt="")
+          .item--title Biscuiti cu lapte cu gust de frisca
+        .col.sm-4.item
+          .item--image: img(src="img/product-4.png", alt="")
+          .item--title Biscuiti cu lapte cu gust de lamaie
+        .col.sm-4.item
+          .item--image: img(src="img/product-5.png", alt="")
+          .item--title Biscuiti cu lapte
+        .col.sm-4.item
+          .item--image: img(src="img/product-6.png", alt="")
+          .item--title Biscuiti cu nuca
+        .col.sm-4.item
+          .item--image: img(src="img/product-7.png", alt="")
+          .item--title Biscuiti cu ovaz fitness mix de seminte nuci si stafide
+        .col.sm-4.item
+          .item--image: img(src="img/product-8.png", alt="")
+          .item--title Biscuiti cu ovaz fitness mix de seminte si cocos
+        .col.sm-4.item
+          .item--image: img(src="img/product-9.png", alt="")
+          .item--title Biscuiti cu ovaz si mere
+
+  </div>

@@ -16,6 +16,7 @@ function createSticky(sticky) {
 
 $(document).ready(function() {
   createSticky($(".navbar"));
+
   $('.navbar--nav').singlePageNav({
     currentClass: 'active',
     offset: 61,
@@ -89,25 +90,58 @@ $(document).ready(function() {
 
     var contact_map = new google.maps.Map(document.getElementById('contacts--map'), {
         zoom: 17,
-        center: new google.maps.LatLng(44.4080438,26.0834312),
+        center: new google.maps.LatLng(44.439866, 26.149394),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-// contact_map //
-  var contact_location = ["Location Title", 44.4080438, 26.0834312, "img/marker.png"];
-  var info = new google.maps.InfoWindow({content: 'SC MAI SERV SRL'});
+  // contact_map //
+    var contact_location = ["Location Title", 44.439866, 26.149394, "img/marker.png"];
+    var info = new google.maps.InfoWindow({content: 'SC MAI SERV SRL'});
 
-  contact_marker = new google.maps.Marker({
-          position: new google.maps.LatLng(contact_location[1], contact_location[2]),
-          map: contact_map,
-          icon: {
-              url: contact_location[3],
-              scaledSize: new google.maps.Size(34, 38)
-          }
-  });
-  contact_marker.addListener('click', function() {
-    info.open(contact_map, contact_marker);
-  });
+    contact_marker = new google.maps.Marker({
+            position: new google.maps.LatLng(contact_location[1], contact_location[2]),
+            map: contact_map,
+            icon: {
+                url: contact_location[3],
+                scaledSize: new google.maps.Size(34, 38)
+            }
+    });
+    contact_marker.addListener('click', function() {
+      info.open(contact_map, contact_marker);
+    });
+  // promo gallery
+    $('[data-slider=gallery]').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      mainClass: 'mfp-img-mobile',
+      closeMarkup: '<button title="%title%" class="mfp-close"><svg><use xlink:href="#close"></use></svg></button>',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tCounter: '%curr% | %total%',
+        titleSrc: function(item) {
+          return item.el.attr('title') + '<small>Promo Gallery</small>';
+        }
+      },
+      callbacks: {
+        buildControls: function() {
+          this.arrowLeft.appendTo(this.contentContainer);
+          this.arrowRight.appendTo(this.contentContainer);
+        }
+      }
+    });
+  // catalog modals
+    $('.catalog--link').magnificPopup({
+      type: 'inline',
+      closeMarkup: '<button title="%title%" class="mfp-close"><svg><use xlink:href="#close"></use></svg></button>',
 
-
+      closeBtnInside: true,
+      preloader: false,
+      
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
 });
 
