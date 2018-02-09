@@ -205,19 +205,17 @@
 
     .title {
       @extend .condensed;
-      color: #fff;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 24px;line-height: 30px;
-      font-weight: 700;letter-spacing: 0.01em;
-      text-align: center;
-      position: relative;z-index: 2;
+      display: inline;
+      color: #fff;text-transform: uppercase;
+      font-size: 24px;line-height: 38px;font-weight: 700;letter-spacing: 0.01em;
+      background-color: rgba($blue, .75);padding: 4px 10px;@extend .animate;
+      -webkit-box-decoration-break: clone;box-decoration-break: clone;
 
-      span {background-color: rgba($blue, .75);padding: 0 5px;@extend .animate;}
+      &--wraper {display: block;position: relative;z-index: 2;text-align: center;}
     }
 
     &:hover .overlay {opacity: .25;}
-    &:hover .title span {background-color: rgba($blue, 0);}
+    &:hover .title {background-color: rgba($blue, 0);}
 
 
   }
