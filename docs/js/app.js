@@ -49,8 +49,6 @@ $(document).ready(function() {
     thumbs: true,
     thumbImage: true,
   })
-
-
   // distributie--map //
     var locations = [
         ["Location Title", 45.8453500, 24.8500363, "img/marker.png"],
@@ -110,7 +108,6 @@ $(document).ready(function() {
     });
   // promo gallery
     $('[data-slider=gallery]').owlCarousel({
-      items: 5,
       responsiveClass:true,
       responsive:{
         0:{
@@ -121,6 +118,9 @@ $(document).ready(function() {
         },
         961:{
             items:3,
+        },
+        1201:{
+            items:5,
         }
       },
       thumbs: false,
