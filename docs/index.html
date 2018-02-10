@@ -40,6 +40,13 @@
                 </ul>
               </nav>
             </div>
+            <div class="wraper--ctrl">
+              <button class="btn" data-show="navbar--nav">
+                <svg class="navbar--logo">
+                  <use xlink:href="#menu"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -116,7 +123,9 @@
           </div>
         </div>
       </div>
-      <div id="distributie--map"></div>
+      <div class="map">
+        <div id="distributie--map"></div>
+      </div>
     </section>
     <!-- SECTION -->
     <section class="section" id="produse">
@@ -130,10 +139,10 @@
             </h2>
             <div class="section--body">
               <div class="row">
-                <div class="col md-9">
+                <div class="col md-9 sm-8">
                   <p>Compania a dezvoltat o marca proprie pentru produsele de panificatie si cereale sub numele de "Daruri din Moldova". Logo-ul reuneste elementele naturii si simbolurile care reprezinta tara.</p>
                 </div>
-                <div class="col md-3"><img class="produse--img" src="img/produse.png" alt=""></div>
+                <div class="col md-3 sm-4"><img class="produse--img" src="img/produse.png" alt=""></div>
               </div>
             </div>
           </div>
@@ -150,7 +159,8 @@
           <div class="col md-3 sm-6"><a class="catalog--link" href="#category1"><span class="overlay" style="background:url(img/category7.jpg) no-repeat center center;"></span><span class="title--wraper"><span class="title">Turte dulci</span></span></a></div>
           <div class="col md-3 sm-6"><a class="catalog--link" href="#category1"><span class="overlay" style="background:url(img/category8.jpg) no-repeat center center;"></span><span class="title--wraper"><span class="title">Napolitane</span></span></a></div>
         </div>
-      </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+      </div>
+      <div class="section--footer"><a class="btn btn--white" href="">Tot catalogul de produse</a></div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
       <div class="zoom-anim-dialog mfp-hide catalog--modal" id="category1">
         <div class="category--description">
           <div class="image"><img src="img/category1.jpg" alt=""></div>
@@ -345,13 +355,13 @@
           <div class="col md-6">
             <div class="contacts--form">
               <div class="row">
-                <div class="col md-6">
+                <div class="col lg-6 md-12 sm-6">
                   <div class="form--row">
                     <label>Nume</label>
                     <input type="text">
                   </div>
                 </div>
-                <div class="col md-6">
+                <div class="col lg-6 md-12 sm-6">
                   <div class="form--row">
                     <label>E-mail</label>
                     <input type="email">
@@ -373,7 +383,9 @@
           </div>
         </div>
       </div>
-      <div id="contacts--map"></div>
+      <div class="map">
+        <div id="contacts--map"></div>
+      </div>
     </section>
     <!-- Scripts -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY&amp;amp;amp;amp;sensor=false"></script>

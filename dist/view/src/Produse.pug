@@ -8,9 +8,9 @@ section#produse.section
           svg: use(xlink:href="#h2bg")
         .section--body
           .row
-            .col.md-9
+            .col.md-9.sm-8
               p Compania a dezvoltat o marca proprie pentru produsele de panificatie si cereale sub numele de "Daruri din Moldova". Logo-ul reuneste elementele naturii si simbolurile care reprezinta tara.
-            .col.md-3: img(src="img/produse.png", alt="").produse--img
+            .col.md-3.sm-4: img(src="img/produse.png", alt="").produse--img
   .catalog
     .row
       .col.md-3.sm-6: a.catalog--link(href="#category1")
@@ -37,6 +37,7 @@ section#produse.section
       .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category8.jpg) no-repeat center center")
         span.title--wraper: span.title Napolitane
+  .section--footer: a.btn.btn--white(href="") Tot catalogul de produse
   <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
   #category1.zoom-anim-dialog.mfp-hide.catalog--modal
     .category--description

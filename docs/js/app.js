@@ -15,13 +15,23 @@ function createSticky(sticky) {
 };
 
 $(document).ready(function() {
-  createSticky($(".navbar"));
+  // NAVBAR SETTINGS
+    createSticky($(".navbar"));
 
-  $('.navbar--nav').singlePageNav({
-    currentClass: 'active',
-    offset: 61,
-    speed: 960,
-  });
+    $('[data-show=navbar--nav]').click(function () {
+      $(this).toggleClass('active');
+      $('.navbar--nav').toggleClass('open');
+    })
+
+    $('.navbar--nav ul li a').click(function () {
+      $('.navbar--nav').removeClass('open');
+    })
+
+    $('.navbar--nav').singlePageNav({
+      currentClass: 'active',
+      offset: 60,
+      speed: 960,
+    });
 
   $('[data-slider=promo]').owlCarousel({
     mouseDrag: false,
@@ -40,16 +50,6 @@ $(document).ready(function() {
     thumbImage: true,
   })
 
-  $('[data-slider=gallery]').owlCarousel({
-    items: 5,
-    thumbs: false,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    nav: true,
-    navText: ['<svg><use xlink:href="#prev"></use></svg>','<svg><use xlink:href="#next"></use></svg>'],
-    dots: false,
-  });
 
   // distributie--map //
     var locations = [
@@ -109,6 +109,28 @@ $(document).ready(function() {
       info.open(contact_map, contact_marker);
     });
   // promo gallery
+    $('[data-slider=gallery]').owlCarousel({
+      items: 5,
+      responsiveClass:true,
+      responsive:{
+        0:{
+            items:1,
+        },
+        640:{
+            items:2,
+        },
+        961:{
+            items:3,
+        }
+      },
+      thumbs: false,
+      mouseDrag: false,
+      touchDrag: false,
+      pullDrag: false,
+      nav: true,
+      navText: ['<svg><use xlink:href="#prev"></use></svg>','<svg><use xlink:href="#next"></use></svg>'],
+      dots: false,
+    });
     $('[data-slider=gallery]').magnificPopup({
       delegate: 'a',
       type: 'image',

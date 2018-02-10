@@ -47,8 +47,33 @@ a {
     border-radius: 25px;
 
     &:hover {
-      color: $blue;
-      border-color: $blue;
+      color: white;
+      background-color: $yellow;
+    }
+
+    @include mobile {
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+  }
+
+  &--white {
+    @extend .text;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    border: 2px solid  white;
+    padding: 10px 30px;
+    border-radius: 25px;
+
+    &:hover {
+      color: $yellow;
+      background-color: white;
+    }
+    
+    @include mobile {
+      padding: 10px 30px;
+      font-size: 18px;
     }
   }
 
@@ -88,86 +113,4 @@ p {
 }
 
 
-.section {
-  padding: 40px 0;
-  &--header {
-    margin: 0 0 26px;
-    color: $blue;
 
-    span, svg {
-      display: block;
-    }
-
-    span {margin-bottom: 13px;}
-
-    svg {
-      width: 80px;
-      height: 4px;
-      fill: $yellow;
-    }
-  }
-  &--footer {
-    text-align: center;
-    padding: 30px 0 10px;
-  }
-}
-
-
-#contacte {padding: 0;color: $dark;}
-.contacts--form {
-  background-color: $yellow;
-  padding: 60px 70px;
-
-  .form--row {
-    margin-bottom: 20px;
-    label {
-      @extend .condensed;
-      color: $dark;
-      display: block;
-      line-height: 1;
-      font-weight: 700;
-      margin-bottom: 10px;
-
-    }
-
-    input, textarea {
-      resize: none;
-      width: 100%;
-      border-radius: 4px;
-      padding: 4px 10px;
-      color: $dark;
-      border: 1px solid #fff;
-      box-shadow: none !important;
-    }
-
-    input {height: 40px;}
-
-    textarea {height: 100px;}
-  }
-}
-
-.contacts--list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  list-style-image: none;
-
-  li {
-    display: flex;
-    align-items: center;
-    padding-top: 16px;
-    font-size: 16px;
-    line-height: 20px;
-    
-
-    svg, span {display: block;}
-
-    svg {
-      fill: $yellow;
-      width: 16px;
-      height: 16px;
-      flex: none;
-      margin-right: 12px;
-    }
-  }
-}
