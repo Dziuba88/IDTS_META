@@ -328,6 +328,7 @@
         align-items: center;
         padding: 15px;
         @extend .animate;
+
         @include mobile {background-color: rgba($blue, .5)}
 
         svg {
@@ -357,7 +358,7 @@
         position: absolute;
         display: block;
         left: 0;right: 0;top: 0;bottom: 0;
-        background-size: cover;
+        background-size: cover !important;
         @extend .animate;
         opacity: .5;
       }
