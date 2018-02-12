@@ -74,7 +74,7 @@ $(document).ready(function() {
             map: map,
             icon: {
                 url: locations[i][3],
-                scaledSize: new google.maps.Size(34, 38)
+                scaledSize: new google.maps.Size(25, 30)
             }
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 
     var contact_map = new google.maps.Map(document.getElementById('contacts--map'), {
-        zoom: 17,
+        zoom: 10,
         center: new google.maps.LatLng(44.439866, 26.149394),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -134,6 +134,7 @@ $(document).ready(function() {
     $('[data-slider=gallery]').magnificPopup({
       delegate: 'a',
       type: 'image',
+      fixedContentPos: true,
       mainClass: 'mfp-img-mobile',
       closeMarkup: '<button title="%title%" class="mfp-close"><svg><use xlink:href="#close"></use></svg></button>',
       gallery: {
@@ -161,9 +162,25 @@ $(document).ready(function() {
 
       closeBtnInside: true,
       preloader: false,
-      
+      fixedContentPos: true,
       removalDelay: 300,
       mainClass: 'my-mfp-zoom-in'
     });
+  // Validate Plugin //
+    if($("[data-validate]").length) {
+      //$.validator.messages.required = 'Заполните правильно поле';
+      $('[data-validate]').each(function() {
+        $(this).validate({
+          focusInvalid: false,
+          errorElement: "span",
+          errorPlacement: function(error, element) {{
+            //$( element ).parent().find('label').addClass("error");
+            $( element ).addClass("error");
+            //error.insertAfter( element );
+          }}
+        });
+      });
+    };
+
 });
 

@@ -195,7 +195,11 @@ button::-moz-focus-inner {
 
 .mfp-arrow-left {left: -40px; }
 .mfp-arrow-right {right: -40px; }
-
+@include mobile {
+  .mfp-arrow-left {left: 10px; }
+  .mfp-arrow-right {right: 10px; }
+  .mfp-bottom-bar {display: none !important;}
+}
 
 .mfp-iframe-holder {
   padding-top: 40px;

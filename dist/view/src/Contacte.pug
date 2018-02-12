@@ -22,24 +22,24 @@ section#contacte.section
               svg: use(xlink:href="#facebook")
               span: a(href="http://facebook.com" target="_blank") Facebook
       .col.md-6
-        .contacts--form
+        form.contacts--form(data-validate)
           .row
             .col.lg-6.md-12.sm-6
               .form--row
                 label Nume
-                input(type="text")
+                input(type="text", name="contact-name", required)
             .col.lg-6.md-12.sm-6
               .form--row
                 label E-mail
-                input(type="email")
+                input(type="email", name="contact-mail", required)
           .form--row
             label Comentariu
-            textarea(cols="30", rows="10")
+            textarea(cols="30", rows="10", name="contact-text", required)
           .form--row
             .captcha--block
               .g-recaptcha(data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW")
               script(src='https://www.google.com/recaptcha/api.js')
-          button.btn.btn--summit Trimite
+          button.btn.btn--summit(type="submit") Trimite
 
 
 

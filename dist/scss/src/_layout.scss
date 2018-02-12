@@ -416,6 +416,8 @@
         color: $dark;
         border: 1px solid #fff;
         box-shadow: none !important;
+
+        &.error {border-color: #c33;color: #c33;}
       }
 
       input {height: 40px;}
