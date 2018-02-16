@@ -182,5 +182,16 @@ $(document).ready(function() {
       });
     };
 
+  $('[data-more]').each( function () {
+    var target = $(this).data('more');
+    $(this).click( function () {
+      $(target).toggleClass('show')
+      $(this).toggleClass('active')
+      $(this).text(function(i, text){
+        return text === "Citeste mai mult" ? "Ascunde" : "Citeste mai mult";
+      })
+    });
+  });
+
 });
 

@@ -46,7 +46,7 @@ a {
     padding: 10px 80px;
     border-radius: 25px;
 
-    &:hover {
+    &:hover, &.active {
       color: white;
       background-color: $yellow;
     }
@@ -114,3 +114,14 @@ p {
 
 
 
+.colapse {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .35s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    height: auto;
+  }
+}
