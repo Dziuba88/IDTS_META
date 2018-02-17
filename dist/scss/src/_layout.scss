@@ -424,6 +424,20 @@
       textarea {height: 100px;}
     }
 
+    .message {
+      background-color: rgba(#fff, .5);
+      border-radius: 4px;
+      padding: 10px 15px;
+      margin: 20px 0;
+      font-family: 'Cabin Condensed', sans-serif;
+      font-size: 14px;line-height: 18px;
+
+      &:last-child {margin-bottom: 0;}
+
+      &.success strong {color: green;}
+      &.danger strong {color: red;}
+    }
+
     @include mediumDown {
       margin: 0 -15px;
       padding: 30px 40px;
