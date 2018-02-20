@@ -60,7 +60,7 @@ $(document).ready(function() {
         ["Location Title", 47.1562327, 27.5169309, "img/marker.png"],
     ];
     var map = new google.maps.Map(document.getElementById('distributie--map'), {
-        zoom: 7,
+        zoom: 6,
         center: new google.maps.LatLng(45.84535,24.8500363),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -176,7 +176,7 @@ $(document).ready(function() {
           errorPlacement: function(error, element) {{
             //$( element ).parent().find('label').addClass("error");
             $( element ).addClass("error");
-            //error.insertAfter( element );
+            error.insertAfter( element );
           }}
         });
       });

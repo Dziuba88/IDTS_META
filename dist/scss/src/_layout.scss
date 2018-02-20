@@ -391,12 +391,26 @@
       .section--body {margin-bottom: 40px;}
     }
   }
+  .contacts--info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .contacts--form {
     background-color: $yellow;
     padding: 60px 70px;
 
     .form--row {
       margin-bottom: 20px;
+      position: relative;
+
+      span.error {
+        color: #c33;
+        font-size: 12px;
+        line-height: 15px;
+        display: block;
+        padding-top: 5px;
+        @extend .condensed;
+      }
 
       label {
         @extend .condensed;
@@ -409,6 +423,7 @@
       }
 
       input, textarea {
+        display: block;
         resize: none;
         width: 100%;
         border-radius: 4px;
@@ -434,8 +449,8 @@
 
       &:last-child {margin-bottom: 0;}
 
-      &.success strong {color: green;}
-      &.danger strong {color: red;}
+      &.success strong {color: #3c3;}
+      &.danger strong {color: #c33;}
     }
 
     @include mediumDown {
