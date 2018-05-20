@@ -9,9 +9,15 @@ section#produse.section
         .section--body
           .row
             .col.md-9.sm-8
-              p Compania a dezvoltat o marca proprie pentru produsele de panificatie si cereale sub numele de "Daruri din Moldova". Logo-ul reuneste elementele naturii si simbolurile care reprezinta tara.
-            .col.md-3.sm-4: img(src="img/produse.png", alt="").produse--img
-  .catalog
+              ul.produse__tabs
+                li(data-navigation="moldova") Daruri din Moldova
+                li(data-navigation="gurmoano") Gurmoano
+              p(data-direction="moldova") Compania a dezvoltat o marca proprie pentru produsele de panificatie si cereale sub numele de "Daruri din Moldova". Logo-ul reuneste elementele naturii si simbolurile care reprezinta tara.
+              p(data-direction="gurmoano") Compania a dezvoltat o marca proprie pentru produsele de panificatie si cereale sub numele de "Gurmoano". Logo-ul reuneste elementele naturii si simbolurile care reprezinta tara.
+            .col.md-3.sm-4
+              img(src="img/produse1.png", alt="" data-direction="moldova").produse--img
+              img(src="img/produse2.png", alt="" data-direction="gurmoano").produse--img
+  .catalog(data-direction="moldova")
     .row
       .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category1.jpg) no-repeat center center")
@@ -37,6 +43,40 @@ section#produse.section
       .col.md-3.sm-6: a.catalog--link(href="#category1")
         span.overlay(style="background:url(img/category8.jpg) no-repeat center center")
         span.title--wraper: span.title Napolitane
+  .catalog(data-direction="gurmoano")
+    .row
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__1.png", alt="")
+        strong Gurmoano Ajvar medium
+        span (Pasta de ardei copt)
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__2.png", alt="")
+        strong Gurmoano Ajvar 
+        span (Pasta de ardei copt picanta)
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__3.png", alt="")
+        strong Gurmano Zacusca medium
+        span (Ardei rosu copt feliat)
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__4.png", alt="")
+        strong Gurmano Zacusca medium
+        span (Ardei rosu copt feliat picant)
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__5.png", alt="")
+        strong Gurmano Ardei galben umplut cu branza
+        span 
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__6.png", alt="")
+        strong Gurmano Ardei rosu umplut cu branza
+        span 
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__7.png", alt="")
+        strong Gurmano Ardei verde umplut cu branza
+        span 
+      .col.md-3.sm-6: .catalog--item
+        img(src="img/gurmoano__8.png", alt="")
+        strong Gurmano ardei Feferoni
+        span 
   .section--footer: a.btn.btn--white(href="") Tot catalogul de produse
   <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
   #category1.zoom-anim-dialog.mfp-hide.catalog--modal

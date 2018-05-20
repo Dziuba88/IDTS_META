@@ -89,9 +89,8 @@
 // CATALOG SECTION //
   #produse {
     .produse--img {
-      margin: -70px auto 0;
+      margin: 0 auto;
       display: block;
-      @include mediumDown {margin: -30px auto 0;}
     }
 
     .section--footer {
@@ -99,14 +98,85 @@
       padding: 25px 15px;
       background-color: $yellow;
     }
+
+    [data-direction] {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .produse__tabs {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+      @extend .condensed;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+
+      @include smallDown {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        padding: 10px 20px;
+        position: relative;
+        color: $blue;
+
+        &:after {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 5px 0 5px;
+          border-color: transparent;
+        }
+
+        &:hover {
+          color: $dark;
+        }
+
+        &.active, &.active:hover {
+          background-color: $yellow;
+          color: #ffffff;
+          cursor: default;
+
+          &:after {
+            border-color: $yellow transparent transparent transparent;
+          }
+        }
+      }
+    }
   }
   .catalog {
     padding: 40px 15px 0;
 
-    .col {
+    &[data-direction=moldova] .col {
       position: relative;
       border: .5px solid #fff;
       background-color: $blue;
+    }
+    &[data-direction=gurmoano] .col {
+      text-align: center;
+      background: #ffffff;
+      background: -moz-linear-gradient(-45deg, #ffffff 0%, #f5f5f5 100%);
+      background: -webkit-linear-gradient(-45deg, #ffffff 0%,#f5f5f5 100%);
+      background: linear-gradient(135deg, #ffffff 0%,#f5f5f5 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=1 );
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     &--link {
@@ -141,6 +211,28 @@
 
       &:hover .overlay {opacity: .2;}
       &:hover .title {background-color: rgba($blue, 0);}
+    }
+
+    &--item {
+
+      img {
+        max-height: 220px;
+        margin-bottom: 20px;
+      }
+
+      strong, span {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 20px;
+      }
+
+      strong {
+        @extend .condensed;
+        font-weight: 700;
+        color: $blue;
+        text-transform: uppercase;
+      }
     }
 
     &--modal {

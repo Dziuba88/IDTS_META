@@ -193,5 +193,21 @@ $(document).ready(function() {
     });
   });
 
+  $('[data-navigation=moldova], [data-direction=moldova]').addClass('active');
+  $('[data-navigation=gurmoano], [data-direction=gurmoano]').removeClass('active');
+
+  $('[data-navigation=moldova]').click(function () {
+    $(this).addClass('active');
+    $('[data-navigation=gurmoano]').removeClass('active');
+    $('[data-direction=moldova]').addClass('active');
+    $('[data-direction=gurmoano]').removeClass('active');
+  })
+  $('[data-navigation=gurmoano]').click(function () {
+    $(this).addClass('active');
+    $('[data-navigation=moldova]').removeClass('active');
+    $('[data-direction=gurmoano]').addClass('active');
+    $('[data-direction=moldova]').removeClass('active');
+  })
+
 });
 
